@@ -17,10 +17,12 @@
     "jsonwebtoken": "^5.0.2",
     "lodash": "^3.10.0",
     "mongodb": "^2.1.16",
+    "mongoose-session": "0.0.4",
     "mongoskin": "^2.1.0",
     "q": "^1.4.1",
     "request": "^2.58.0",
-    "rootpath": "^0.1.2"
+    "rootpath": "^0.1.2",
+    "session-mongoose": "^0.5.2"
   },
   "license": "MIT"
 }
