@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "mongodb://caplast:caplast@ds147080.mlab.com:47080/caplast",
+    "connectionString": "mongodb://caplast:caplast@ds147080.mlab.com:47080/caplast || mongodb://localhost:27017/mean-stack-registration-login-example",
     "apiUrl": "http://localhost:3000/api",
     "secret": "REPLACE THIS WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
 }
