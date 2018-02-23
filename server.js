@@ -1,5 +1,6 @@
 ﻿require('rootpath')();
-var express = require('express');
+var express = require('express'),
+SessionStore = require('session-mongoose')(express);
 var app = express();
 var session = require('express-session');
 var bodyParser = require('body-parser');
@@ -10,7 +11,15 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(session({ secret: config.secret, resave: false, saveUninitialized: true }));
+app.use(
+    express.session({
+      store: new SessionStore({
+      url: 'mongodb://caplast:caplast@ds147080.mlab.com:47080/caplast || mongodb://localhost:27017/mean-stack-registration-login-example',
+      interval: 120
+    }),
+    cookie: { maxAge: 120 },
+    secret: 'my secret'
+  }))
 
 // use JWT auth to secure the api
 app.use('/api', expressJwt({ secret: config.secret }).unless({ path: ['/api/users/authenticate', '/api/users/register'] }));
