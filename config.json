@@ -1,5 +1,5 @@
 ﻿{
     "connectionString": "mongodb://caplast:caplast@ds147080.mlab.com:47080/caplast",
-    "apiUrl": "http://localhost:3000/api",
+    "apiUrl": "https://dry-shore-40055.herokuapp.com/api",
     "secret": "no secret"
 }
